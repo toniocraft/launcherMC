@@ -44,7 +44,7 @@ def main():
             if url2.toString().startswith("https://www.microsoft.com"):
                 # Get the code from the url
                 try:
-                    auth_code = minecraft_launcher_lib.microsoft_account.parse_auth_code_url(url, state)
+                    auth_code = minecraft_launcher_lib.microsoft_account.parse_auth_code_url(url2.toString(), state)
                 except AssertionError:
                     print("States do not match!")
                     sys.exit(1)
